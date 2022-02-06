@@ -95,6 +95,12 @@
             <artifactId>yudao-spring-boot-starter-mq</artifactId>
         </dependency>
 
+<!--        <dependency>-->
+<!--            <groupId>com.github.yulichang</groupId>-->
+<!--            <artifactId>mybatis-plus-join</artifactId>-->
+<!--            <version>1.2.2</version>-->
+<!--        </dependency>-->
+
         <!-- 服务保障相关 -->
         <dependency>
             <groupId>cn.iocoder.boot</groupId>
@@ -151,6 +157,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.6.3</version>
                 <configuration>
                     <fork>true</fork>
                 </configuration>

@@ -43,6 +43,9 @@ mybatis-plus:
   type-aliases-package: ${yudao.info.base-package}.modules.*.dal.dataobject, ${yudao.core-service.base-package}.modules.*.dal.dataobject
 
 --- #################### 芋道相关配置 ####################
+table-name:
+  material: bus_material
+  manifest: bus_project_manifest
 
 yudao:
   info:
