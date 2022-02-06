@@ -41,6 +41,9 @@ public class SysAuthPermissionInfoRespVO {
         @ApiModelProperty(value = "用户头像", required = true, example = "http://www.iocoder.cn/xx.jpg")
         private String avatar;
 
+        @ApiModelProperty(value = "部门id", required = true, example = "109")
+        private Long deptId;
+
     }
 
 }
