@@ -8,12 +8,15 @@ const getters = {
   token: state => state.user.token,
   avatar: state => state.user.avatar,
   name: state => state.user.name,
+  dept_id: state => state.user.dept_id,
   introduction: state => state.user.introduction,
   roles: state => state.user.roles,
   permissions: state => state.user.permissions,
   permission_routes: state => state.permission.routes,
   sidebarRouters:state => state.permission.sidebarRouters,
   // 数据字典
-  dict_datas: state => state.dict.dictDatas
+  dict_datas: state => state.dict.dictDatas,
+  // 部门信息
+  dept_map:state => state.dept.dept_map
 }
 export default getters

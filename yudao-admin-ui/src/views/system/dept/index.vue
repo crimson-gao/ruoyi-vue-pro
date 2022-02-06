@@ -107,7 +107,7 @@ import "@riophae/vue-treeselect/dist/vue-treeselect.css";
 import {SysCommonStatusEnum} from '@/utils/constants'
 import { getDictDataLabel, getDictDatas, DICT_TYPE } from '@/utils/dict'
 import {listSimpleUsers} from "@/api/system/user";
-
+import store from "@/store"
 export default {
   name: "Dept",
   components: { Treeselect },
@@ -253,6 +253,7 @@ export default {
       this.title = "添加部门";
       listDept().then(response => {
 	        this.deptOptions = this.handleTree(response.data, "id");
+
       });
     },
     /** 修改按钮操作 */
@@ -275,12 +276,14 @@ export default {
             updateDept(this.form).then(response => {
               this.msgSuccess("修改成功");
               this.open = false;
+              store.dispatch("dept/updateDeptMap")
               this.getList();
             });
           } else {
             addDept(this.form).then(response => {
               this.msgSuccess("新增成功");
               this.open = false;
+              store.dispatch("dept/updateDeptMap")
               this.getList();
             });
           }

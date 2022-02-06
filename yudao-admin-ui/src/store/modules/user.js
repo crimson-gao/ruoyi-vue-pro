@@ -8,12 +8,16 @@ const user = {
     name: '',
     avatar: '',
     roles: [],
-    permissions: []
+    permissions: [],
+    dept_id: undefined,
   },
 
   mutations: {
     SET_ID: (state, id) => {
       state.id = id
+    },
+    SET_DEPT_ID: (state,id) => {
+      state.dept_id = id
     },
     SET_TOKEN: (state, token) => {
       state.token = token
@@ -100,9 +104,12 @@ const user = {
           } else {
             commit('SET_ROLES', ['ROLE_DEFAULT'])
           }
+          console.log(user)
+          const dept_id = user.deptId
           commit('SET_ID', user.id)
-          commit('SET_NAME', user.userName)
+          commit('SET_NAME', user.nickname)
           commit('SET_AVATAR', avatar)
+          commit('SET_DEPT_ID', dept_id)
           resolve(res)
         }).catch(error => {
           reject(error)
@@ -117,6 +124,7 @@ const user = {
           commit('SET_TOKEN', '')
           commit('SET_ROLES', [])
           commit('SET_PERMISSIONS', [])
+          commit('SET_DEPT_ID', undefined)
           removeToken()
           resolve()
         }).catch(error => {

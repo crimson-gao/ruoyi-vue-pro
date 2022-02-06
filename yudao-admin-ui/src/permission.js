@@ -20,6 +20,11 @@ router.beforeEach((to, from, next) => {
       if (store.getters.roles.length === 0) {
         // 获取字典数据
         store.dispatch('dict/loadDictDatas')
+        if (store.getters.dept_map === undefined){
+          // 加载部门数据, 仅第一次主动加载
+          store.dispatch('dept/updateDeptMap')
+          console.log("dept map loaded")
+        }
         // 判断当前用户是否已拉取完user_info信息
         store.dispatch('GetInfo').then(res => {
           // 拉取user_info

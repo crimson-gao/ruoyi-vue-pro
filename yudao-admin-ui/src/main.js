@@ -37,8 +37,10 @@ import RightToolbar from "@/components/RightToolbar"
 // import hljs from 'highlight.js'
 // import 'highlight.js/styles/github-gist.css'
 import {DICT_TYPE, getDictDataLabel, getDictDatas} from "@/utils/dict";
-
+import {getDeptName, updateDept} from "@/utils/dept";
 // 全局方法挂载
+Vue.prototype.getDeptName = getDeptName
+Vue.prototype.updateDept = updateDept
 Vue.prototype.getDicts = getDicts
 Vue.prototype.getConfigKey = getConfigKey
 Vue.prototype.parseTime = parseTime
