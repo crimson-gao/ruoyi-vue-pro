@@ -50,7 +50,7 @@ CREATE TABLE `bus_project` (
 `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
 `deleted` bit(1) NOT NULL DEFAULT b'0' COMMENT '是否删除',
 PRIMARY KEY (`id`),
-FOREIGN KEY (dept_id) REFERENCES sys_dept(id)
+FOREIGN KEY (dept_id) REFERENCES 'ruoyi-vue-pro'.sys_dept(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='项目表';
 # 需要设置项目表的权限为仅部门
 
