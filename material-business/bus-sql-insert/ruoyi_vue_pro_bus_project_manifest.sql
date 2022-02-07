@@ -1,0 +1,5 @@
+
+INSERT INTO bus_project_manifest (id, project_id, material_id, required_quantity, received_quantity, note, creator, create_time, updater, update_time, deleted) VALUES (1, 1, 1, '2', '1', null, '1', '2022-02-04 18:15:40', '1', '2022-02-04 18:15:40', false);
+INSERT INTO bus_project_manifest (id, project_id, material_id, required_quantity, received_quantity, note, creator, create_time, updater, update_time, deleted) VALUES (2, 1, 1, '3', '4', null, '1', '2022-02-04 18:19:54', '1', '2022-02-04 18:19:54', false);
+INSERT INTO bus_project_manifest (id, project_id, material_id, required_quantity, received_quantity, note, creator, create_time, updater, update_time, deleted) VALUES (3, 4, 1, '5', '2', null, '1', '2022-02-04 18:22:04', '1', '2022-02-04 18:22:04', false);
+INSERT INTO bus_project_manifest (id, project_id, material_id, required_quantity, received_quantity, note, creator, create_time, updater, update_time, deleted) VALUES (4, 3, 2, '5', '1', null, '1', '2022-02-04 21:55:38', '1', '2022-02-04 21:55:48', false);
