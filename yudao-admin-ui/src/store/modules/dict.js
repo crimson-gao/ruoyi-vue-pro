@@ -20,20 +20,24 @@ const actions = {
     listSimpleDictDatas().then(response => {
       // 设置数据
       const dictDataMap = {}
-      response.data.forEach(dictData => {
-        // 获得 dictType 层级
-        const enumValueObj = dictDataMap[dictData.dictType]
-        if (!enumValueObj) {
-          dictDataMap[dictData.dictType] = []
-        }
-        // 处理 dictValue 层级
-        dictDataMap[dictData.dictType].push({
-          value: dictData.value,
-          label: dictData.label
+      if(response !== undefined){
+        response.data.forEach(dictData => {
+          // 获得 dictType 层级
+          const enumValueObj = dictDataMap[dictData.dictType]
+          if (!enumValueObj) {
+            dictDataMap[dictData.dictType] = []
+          }
+          // 处理 dictValue 层级
+          dictDataMap[dictData.dictType].push({
+            value: dictData.value,
+            label: dictData.label
+          })
         })
-      })
-      // 存储到 Store 中
-      commit('SET_DICT_DATAS', dictDataMap)
+        // 存储到 Store 中
+        commit('SET_DICT_DATAS', dictDataMap)
+      }else{
+        console.log("update dict map got empty resp")
+      }
     })
   }
 }
