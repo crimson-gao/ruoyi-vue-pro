@@ -12,7 +12,7 @@
     <artifactId>material-business-api</artifactId>
     <packaging>jar</packaging>
 
-    <name>${artifactId}</name>
+    <name>${project.artifactId}</name>
     <dependencies>
 <!--        <dependency>-->
 <!--            <groupId>cn.iocoder.boot</groupId>-->
