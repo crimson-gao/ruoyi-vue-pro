@@ -1,2 +1,0 @@
-
-INSERT INTO system_user (id, username, password, nickname, remark, dept_id, post_ids, email, mobile, sex, avatar, status, login_ip, login_date, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (109, 'crimson3', '$2a$10$PgGZdd7oXbJYUiAfRjrA6.oXkrTWfraJH1lJOeAQQgIUePzZ0cwBi', 'crimson', null, 100, '[]', '', '', 0, '', 0, '127.0.0.1', '2022-02-06 15:20:56', '1', '2022-02-03 21:36:02', null, '2022-02-06 15:20:56', false, 1);

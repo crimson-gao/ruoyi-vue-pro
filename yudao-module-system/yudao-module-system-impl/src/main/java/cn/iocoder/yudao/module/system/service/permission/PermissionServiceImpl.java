@@ -385,6 +385,8 @@ public class PermissionServiceImpl implements PermissionService {
             if (Objects.equals(role.getDataScope(), DataScopeEnum.DEPT_AND_CHILD.getScope())) {
                 List<DeptDO> depts = deptService.getDeptsByParentIdFromCache(loginUser.getDeptId(), true);
                 CollUtil.addAll(result.getDeptIds(), CollectionUtils.convertList(depts, DeptDO::getId));
+                //添加本身部门id
+                CollUtil.addAll(result.getDeptIds(), loginUser.getDeptId());
                 continue;
             }
             // 情况五，SELF
@@ -404,7 +406,7 @@ public class PermissionServiceImpl implements PermissionService {
     @Override
     public Set<Long> getUserRoleIdListByRoleIds(Collection<Long> roleIds) {
         return CollectionUtils.convertSet(userRoleMapper.selectListByRoleIds(roleIds),
-                UserRoleDO::getRoleId);
+                UserRoleDO::getUserId);
     }
 
 }
