@@ -274,14 +274,6 @@ export default {
         this.refreshTable = true;
       });
     },
-    /** 展开/折叠操作 */
-    toggleExpandAll() {
-      this.refreshTable = false;
-      this.isExpandAll = !this.isExpandAll;
-      this.$nextTick(() => {
-        this.refreshTable = true;
-      });
-    },
     /** 修改按钮操作 */
     handleUpdate(row) {
       this.reset();
